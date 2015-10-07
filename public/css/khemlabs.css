@@ -1,0 +1,41 @@
+.hero
+{
+	height: 300px;
+    background-color:#424242;
+	overflow: hidden;
+    background-image: url('../img/nodes.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+}
+
+#who-we-are{
+    text-align: justify;
+    hyphens: auto;
+}
+
+.hero-content
+{
+	color: #fff;
+	font-size: 1.4em;
+	text-shadow: 1px 2px 0 #000;
+    font-family: 'Source Code Pro';
+    padding-left: 30px;
+}
+
+.follow-wrapper{
+  height: 130px;
+}
+
+.follow-content{
+	color: #fff;
+	font-size: 1.4em;
+	text-shadow: 1px 2px 0 #000;
+    font-family: 'Source Code Pro';
+    text-align:center;
+}
+
+.card-content{
+  text-align: justify;
+  hyphens: auto;
+}
