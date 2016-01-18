@@ -1,3 +1,9 @@
+.brand-logo
+{
+	font-family: 'Ubuntu';
+	/*padding-left: 4px;*/
+}
+
 .hero
 {
 	height: 300px;
@@ -8,11 +14,6 @@
     background-attachment: fixed;
     background-position: right top;
     background-size: cover;
-}
-
-#who-we-are{
-    text-align: justify;
-    hyphens: auto;
 }
 
 .hero-content
@@ -39,4 +40,9 @@
 .card-content{
   text-align: justify;
   hyphens: auto;
+}
+
+#about-us{
+    text-align: justify;
+    hyphens: auto;
 }

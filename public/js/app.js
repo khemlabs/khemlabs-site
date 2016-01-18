@@ -1,10 +1,9 @@
 (function($, Materialize){
-  
+
   var $output = $("#console-stdout");
   var writting = false;
-  
+
   var textLines = [
-    "Khem Labs",
     "Web Services",
     "Single Page Applications",
     "Web Mobile",
@@ -18,7 +17,7 @@
     "Express",
     "PostgreSQL"
   ]
-  
+
   var getWord = (function(){
     var next = 0;
     return function(){
@@ -30,7 +29,7 @@
       return word;
     };
   })();
-      
+
   var printWord = function(word){
     writting = true;
     var nlines = word.length;
@@ -45,21 +44,21 @@
         eraseWord();
       }
     }, 200);
-  }   
-  
+  }
+
   var eraseWord = function(){
     setTimeout(function(){
       $output.html("");
       writting = false;
     }, 1000);
   }
-  
+
   setInterval(function(){
     if(!writting){
       printWord(getWord());
     }
   }, 500);
-  
+
   $('a[href^="#"]').on('click',function (e) {
       e.preventDefault();
 
@@ -72,28 +71,28 @@
           window.location.hash = target;
       });
   });
-  
+
   $("#message-form").on("submit", function(){
     if($('#message-form')[0].checkValidity()){
       $.ajax({
         type: "post",
-        contentType: "application/x-www-form-urlencoded",        
+        contentType: "application/x-www-form-urlencoded",
         url: "/message",
         data: $('#message-form').serialize()
       }).then(function(data){
-        
+
         $("#send-btn")
           .addClass("disabled")
           .attr("disabled", true);
-        
+
         setTimeout(function(){
           $("#send-btn")
             .removeClass("disabled")
             .removeAttr("disabled");
         }, 60000);
-        
+
         Materialize.toast("Message sent", 3000, "green");
-        
+
         $('#message-form')[0].reset();
       });
     }else{
@@ -101,5 +100,5 @@
     }
     return false;
   });
-  
+
 })(jQuery, Materialize);
