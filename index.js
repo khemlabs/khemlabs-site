@@ -4,6 +4,7 @@
 
 var render = require('./lib/render');
 var messageApi = require('./lib/message');
+var i18n = require('i18n');
 var serve = require('koa-static');
 var route = require('koa-route');
 var parse = require('co-body');
