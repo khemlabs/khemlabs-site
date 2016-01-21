@@ -1,0 +1,252 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper grey darken-4">
+      <a href="#!" class="brand-logo" itemprop="name"><span style="color:#fff;">khem</span><span style="color:#d02232;">labs</span></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#about-us"><%= menu_about %></a></li>
+        <li><a href="#team"><%= menu_team %></a></li>
+        <li><a href="#services"><%= menu_services %></a></li>
+        <li><a href="#clients"><%= menu_clients %></a></li>
+        <li><a href="#contact"><%= menu_contact %></a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="center">
+  <h1 class="brand" style="margin: 0.2em">
+    <a itemprop="url" href="http://khemlabs.com" style="display: block;" >
+      <img itemprop="logo" src="./img/logo-brand.png" />
+    </a>
+    <span itemprop="legalName"><strong style="color:#333133;">khem</strong> <strong style="color:#d02232; margin-left:-0.2em;">labs</strong></span>
+  </h1>
+  <h5 class="header center" style="color:#d02232; margin-top: 0.1em;">
+    <%= khemlabs_frase %>
+  </h5>
+  <p style="">
+    <a itemprop="sameAs" href="https://github.com/khemlabs" target="_blank" style="margin-right:8px;color:#d02232;"><i class="fa fa-github fa-2x"></i></a>
+    <a itemprop="sameAs" href="https://twitter.com/khemlabs" target="_blank" style="margin-right:8px;color:#d02232;"><i class="fa fa-twitter fa-2x"></i></a>
+    <a itemprop="sameAs" href="https://www.facebook.com/Khem-Labs-454510288034424" target="_blank" style="margin-right:8px;color:#d02232;"><i class="fa fa-facebook fa-2x"></i></a>
+    <a itemprop="sameAs" href="https://www.linkedin.com/company/khemlabs" target="_blank" style="margin-right:8px;color:#d02232;"><i class="fa fa-linkedin fa-2x"></i></a>
+  </p>
+</div>
+
+<div class="hero valign-wrapper">
+  <div class="valign center hero-content">
+    <h2>> <span id="console-stdout"></span></h2>
+  </div>
+</div>
+
+<div id="about-us" class="section white z-depth-1  flow-text" style="margin-top: 25px;">
+  <div class="container">
+    <div class="row">
+      <h2 class="header red-text tex-darken-4"><%= menu_about %></h2>
+      <p itemprop="description"><%= description_about %></p>
+    </div>
+  </div>
+</div>
+
+<div id="team" class="section grey lighten-1 z-depth-2  flow-text" style="margin-top: 25px;">
+  <div class="container">
+    <div class="row">
+      <h2 class="header red-text tex-darken-4"><%= menu_team %></h2>
+    </div>
+    <div class="row">
+
+      <div class="col s12 m4" itemprop="founder" itemscope itemtype="http://schema.org/Person">
+        <div  class="center-align">
+          <img itemprop="image" src="./img/lucio.png" class="circle img-responsive" width="270" height="270">
+        </div>
+        <p class="center-align" itemprop="name">
+          <a href="https://linkedin.com/in/luciomf"><strong>Lucio Moya</strong></a>
+        </p>
+        <p class="center-align" itemprop="jobTitle"><em><%= description_lmoya %></em></p>
+      </div>
+
+      <div class="col s12 m4" itemprop="founder" itemscope itemtype="http://schema.org/Person">
+        <div  class="center-align">
+          <img itemprop="image" src="./img/pablo.png" class="circle img-responsive" width="270" height="270">
+        </div>
+        <p class="center-align" itemprop="name">
+          <a href="https://linkedin.com/in/pgambetta">
+            <strong>Pablo Gambetta</strong></p>
+          </a>
+        <p class="center-align" itemprop="jobTitle"><em><%= description_pgambetta %></em></p>
+      </div>
+
+      <div class="col s12 m4" itemscope itemtype="http://schema.org/Person">
+        <div  class="center-align">
+          <img src="./img/ainu.png" class="circle img-responsive" width="270" height="270">
+        </div>
+        <p class="center-align" itemprop="name">
+          <strong>Ainú Chambeaud</strong>
+        </p>
+        <p class="center-align"><em><%= description_achambeaud %></em></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="services" class="section white z-depth-1  flow-text" style="margin-top: 25px;">
+  <div class="container" itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog">
+    <div class="row">
+      <h2 class="header red-text tex-darken-4"><%= menu_services %></h2>
+    </div>
+    <div class="row">
+
+      <div class="col s12 m12">
+        <div class="card" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+          <div class="card-image grey darken-3">
+            <img itemprop="image" src="./img/services.jpg">
+            <span itemprop="name" class="card-title hero-content">
+              <%= title_rest %>
+            </span>
+          </div>
+          <div class="card-content">
+            <p itemprop="description"><%= description_rest %></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image grey darken-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+            <img itemprop="image" src="./img/multimedia.jpg">
+            <span itemprop="name" class="card-title hero-content ">
+              <%= title_canvas %>
+            </span>
+          </div>
+          <div class="card-content">
+            <p itemprop="description"><%= description_canvas %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m12">
+        <div class="card" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+          <div class="card-image grey darken-3">
+            <img itemprop="image" src="./img/spa.jpg">
+            <span itemprop="name" class="card-title hero-content ">
+              <%= title_singlepage %>
+            </span>
+          </div>
+          <div class="card-content">
+            <p itemprop="description" lang="en"><%= description_singlepage %></p>
+          </div>
+        </div>
+        <div class="card" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+          <div class="card-image grey darken-3">
+            <img itemprop="image" src="./img/realtime.jpg">
+            <span itemprop="name" class="card-title hero-content"><%= title_realtime %></span>
+          </div>
+          <div class="card-content">
+            <p itemprop="description"><%= description_realtime %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="clients" class="section grey lighten-1 z-depth-2 flow-text" style="margin-top: 25px;">
+  <div class="container">
+    <div class="row">
+      <h2 class="header red-text tex-darken-4"><%= menu_clients %></h2>
+    </div>
+
+    <div class="row">
+
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image white">
+            <img src="./img/clients/educar.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image white">
+            <img src="./img/clients/encuentro.jpg" />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image white">
+            <img src="./img/clients/oxigeno.png" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image white">
+            <img src="./img/clients/logo-ministerio-educacion.png" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image white">
+            <img src="./img/clients/logo_lepton.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image white">
+            <img src="./img/clients/logo-ministerio-salud.png" />
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+
+<div id="contact" class="section white z-depth-1 flow-text" style="margin-top: 25px;">
+  <div class="container">
+    <div class="row">
+      <h2 class="header red-text tex-darken-4"><%= menu_contact %></h2>
+    </div>
+    <div class="row">
+      <form class="col s12" id="message-form">
+        <div class="row">
+          <div class="input-field col s6">
+            <input name="first_name" id="first_name" type="text" class="validate" required>
+            <label for="first_name"><%= name_contact %> Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input name="company" id="company" type="text" class="validate" required>
+            <label for="company_name"><%= company_contact %> Company</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="email" id="email" type="email" class="validate" required>
+            <label for="email"><%= email_contact %> Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea name="textbody" id="textbody" class="materialize-textarea" required></textarea>
+            <label for="textbody"><%= message_contact %> Message</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 red-text tex-darken-4">
+            <button id="send-btn" class="waves-effect red btn"><i class="material-icons left">comment</i>
+              <%= send_contact %>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

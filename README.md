@@ -15,6 +15,14 @@ cd khemlabs-site
 npm install
 node app.js
 ```
+## How do I get set up with Vagrant? ##
+
+```
+#!bash
+git clone https://github.com/khemlabs/khemlabs-site.git
+cd khemlabs-site
+GMAIL_USER="user" GMAIL_PASSWORD="password" EMAIL_TO="list" vagrant up --no-parallel
+```
 
 ## How do I get set up with Docker? ##
 

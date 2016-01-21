@@ -1,9 +1,6 @@
 (function($, Materialize){
-
-  var $output = $("#console-stdout");
-  var writting = false;
-
-  var textLines = [
+  
+  var scroller = new letterScroller('console-stdout', [
     "Web Services",
     "Single Page Applications",
     "Web Mobile",
@@ -16,49 +13,8 @@
     "Nginx",
     "Express",
     "PostgreSQL"
-  ]
-
-  var getWord = (function(){
-    var next = 0;
-    return function(){
-      if(next > (textLines.length - 1)){
-        next = 0;
-      }
-      var word = textLines[next];
-      next++;
-      return word;
-    };
-  })();
-
-  var printWord = function(word){
-    writting = true;
-    var nlines = word.length;
-    var position = 0;
-    var timer = setInterval(function(){
-      var letter = word[position];
-      if(letter){
-        $output.append(letter);
-        position++;
-      }else{
-        clearInterval(timer);
-        eraseWord();
-      }
-    }, 200);
-  }
-
-  var eraseWord = function(){
-    setTimeout(function(){
-      $output.html("");
-      writting = false;
-    }, 1000);
-  }
-
-  setInterval(function(){
-    if(!writting){
-      printWord(getWord());
-    }
-  }, 500);
-
+  ]);
+                                                 
   $('a[href^="#"]').on('click',function (e) {
       e.preventDefault();
 

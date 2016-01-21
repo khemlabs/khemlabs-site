@@ -1,20 +1,16 @@
 {
   "name": "khemlabs-site",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HTML + CSS + Javscript",
   "main": "index.js",
   "dependencies": {
-    "co": "^4.6.0",
-    "co-body": "^4.0.0",
-    "co-redis": "^1.2.2",
-    "co-views": "^2.1.0",
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
     "i18n": "^0.5.0",
-    "koa": "^1.0.0",
-    "koa-route": "^2.4.2",
-    "koa-static": "^1.4.9",
+    "ejs": "^2.2.1",
     "nodemailer": "^1.5.0",
-    "redis": "^2.0.0",
-    "swig": "^1.4.2"
+    "path": "^0.12.7",
+    "redis": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {

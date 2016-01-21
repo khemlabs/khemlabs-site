@@ -1,0 +1,31 @@
+{
+  "name": "letter-scroller",
+  "main": "dist/letter-scroller.min.js",
+  "authors": [
+    "Pablo Gambetta <gambeita@gmail.com>"
+  ],
+  "description": "A lightweight, easy to use Javascript words letter by letter injector",
+  "keywords": [
+    "scroller",
+    "scroll",
+    "by",
+    "letter",
+    "delayed",
+    "by",
+    "word"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/khemlabs/letter-scroller",
+  "dependencies": {
+    "jquery": "~2.2.0"
+  },
+  "_release": "1df15d053f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "1df15d053f262336b26803845b30bb7e2c195a24"
+  },
+  "_source": "git://github.com/khemlabs/letter-scroller.git",
+  "_target": "*",
+  "_originalSource": "letter-scroller"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "khemlabs-site",
+  "version": "0.0.0",
+  "homepage": "https://github.com/khemlabs/khemlabs-site",
+  "authors": [
+    "Pablo Gambetta <gambeita@gmail.com>"
+  ],
+  "description": "HTML + CSS + Javscript",
+  "main": "index.html",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.5.0",
+    "materialize": "~0.97.5",
+    "letter-scroller": "*"
+  }
+}
