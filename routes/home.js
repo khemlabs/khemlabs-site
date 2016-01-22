@@ -1,7 +1,14 @@
-var express = require('express'),
-    router = express.Router();
+var express     = require('express')
+    ,locale     = require("locale")
+    ,supported  = new locale.Locales(["en", "es"])
+    ,router     = express.Router();
 
 router.get('/', function(req, res, next) {
+  var locales = new locale.Locales(req.headers["accept-language"])
+  return res.redirect(req.protocol + '://' + req.get('host') + '/' + locales.best(supported))
+});
+
+router.get('/es', function(req, res, next) {
   return res.render('partials/index.ejs', {lang: 'es'});
 });
 
