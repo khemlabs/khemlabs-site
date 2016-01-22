@@ -2,9 +2,11 @@
  * Module dependencies.
  */
 var express           = require('express')
+    ,partials         = require('express-partials')
     ,bodyParser       = require('body-parser')
     ,app              = express()
     ,path             = require('path')
+    ,http             = require('http')
     ,i18n             = require('i18n')
     ,ejs              = require('ejs')
     ,messageRouter    = require('./routes/message')
@@ -12,6 +14,7 @@ var express           = require('express')
     ,log              = require("./services/Log");
 
 // Configure app
+var server = http.createServer(app);
 
 i18n.configure({
     locales:['en', 'es'],
@@ -30,6 +33,9 @@ i18n.configure({
 });
 app.use(i18n.init);
 
+// load the express-partials middleware
+app.use(partials());
+
 app.set('view engine', 'ejs');  
 
 app.use(bodyParser.json());
@@ -44,5 +50,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // listen
 
-app.listen(3000);
-log.info('Listening on port 3000', 'app.js', 'Init');
+server.listen(process.env.PORT || 3000, function() {
+  var address = server.address().address;
+  var host = address && address !== '::' ? address : 'localhost',
+      port = server.address().port;
+  console.info('[app] Listening at http://%s:%s', host, port);
+});

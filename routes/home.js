@@ -2,7 +2,7 @@ var express = require('express'),
     router = express.Router();
 
 var translate = function(req, res, next, lang){
-  return res.render('index', { 
+  return res.render('partials/index.ejs', {
     menu_about: res.__({phrase: 'menu_about', locale: lang}),
     menu_team: res.__({phrase: 'menu_team', locale: lang}),
     menu_services: res.__({phrase: 'menu_services', locale: lang}),
