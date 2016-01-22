@@ -6,15 +6,6 @@ Khemlabs Official Website
 
 HTML + CSS + Javscript
 
-### How do I get set up? ###
-
-```
-#!bash
-git clone https://github.com/khemlabs/khemlabs-site.git
-cd khemlabs-site
-npm install
-node app.js
-```
 ## How do I get set up with Vagrant? ##
 
 ```
@@ -23,6 +14,17 @@ git clone https://github.com/khemlabs/khemlabs-site.git
 cd khemlabs-site
 GMAIL_USER="user" GMAIL_PASSWORD="password" EMAIL_TO="list" vagrant up --no-parallel
 ```
+
+## Debugging ##
+
+```
+#!bash
+http://127.0.0.1:9080/?ws=127.0.0.1:9080&port=5858
+```
+
+## Known Issues ##
+
+When executing this project with vagrant, "local.sh" is run before lifting nodejs server, that's why it could happen that although the "docker instance" is running, the page is not accesible. You only have to wait until local.sh finish.
 
 ## How do I get set up with Docker? ##
 
@@ -48,6 +50,16 @@ docker run -d --name khemlabsite --link redis:redishost -p 3000:3000 -e GMAIL_US
 docker run --name redis -d redis
 docker run -d --name nginx-proxy -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
 docker run -d --name khemlabsite --link redis:redishost -e GMAIL_USER="user" -e GMAIL_PASSWORD='password' -e EMAIL_TO='list' -e VIRTUAL_HOST=host khemlabs/site
+```
+
+### How do I get set up in my local machine? ###
+
+```
+#!bash
+git clone https://github.com/khemlabs/khemlabs-site.git
+cd khemlabs-site
+npm install
+node app.js
 ```
 
 ### Environment Variables ###
