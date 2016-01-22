@@ -20,4 +20,4 @@ WORKDIR /space/webapps/khemlabs-site/
 RUN npm install
 RUN bower install --allow-root
 
-CMD ["forever", "index.js"]
+CMD ["forever", "app.js"]
