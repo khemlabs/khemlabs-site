@@ -17,7 +17,6 @@ if(process.env.DISABLE_EMAIL && process.env.DISABLE_EMAIL != 'false'){
 
 function email(data)
 {
-  console.log(process.env.DISABLE_EMAIL);
   if(process.env.DISABLE_EMAIL && process.env.DISABLE_EMAIL != 'false'){
     log.info('Email disabled', 'services/Message', 'email');
   } else {

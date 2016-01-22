@@ -3,11 +3,11 @@
     <div class="nav-wrapper grey darken-4">
       <a href="#!" class="brand-logo" itemprop="name"><span style="color:#fff;">khem</span><span style="color:#d02232;">labs</span></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#about-us"><%= menu_about %></a></li>
-        <li><a href="#team"><%= menu_team %></a></li>
-        <li><a href="#services"><%= menu_services %></a></li>
-        <li><a href="#clients"><%= menu_clients %></a></li>
-        <li><a href="#contact"><%= menu_contact %></a></li>
+        <li><a href="#about-us"><%= __({phrase: 'menu_about', locale: lang}) %></a></li>
+        <li><a href="#team"><%= __({phrase: 'menu_team', locale: lang}) %></a></li>
+        <li><a href="#services"><%= __({phrase: 'menu_services', locale: lang}) %></a></li>
+        <li><a href="#clients"><%= __({phrase: 'menu_clients', locale: lang}) %></a></li>
+        <li><a href="#contact"><%= __({phrase: 'menu_contact', locale: lang}) %></a></li>
       </ul>
     </div>
   </nav>
@@ -21,7 +21,7 @@
     <span itemprop="legalName"><strong style="color:#333133;">khem</strong> <strong style="color:#d02232; margin-left:-0.2em;">labs</strong></span>
   </h1>
   <h5 class="header center" style="color:#d02232; margin-top: 0.1em;">
-    <%= khemlabs_frase %>
+    <%= __({phrase: 'khemlabs_frase', locale: lang}) %>
   </h5>
   <p style="">
     <a itemprop="sameAs" href="https://github.com/khemlabs" target="_blank" style="margin-right:8px;color:#d02232;"><i class="fa fa-github fa-2x"></i></a>
@@ -40,8 +40,8 @@
 <div id="about-us" class="section white z-depth-1  flow-text" style="margin-top: 25px;">
   <div class="container">
     <div class="row">
-      <h2 class="header red-text tex-darken-4"><%= menu_about %></h2>
-      <p itemprop="description"><%= description_about %></p>
+      <h2 class="header red-text tex-darken-4"><%= __({phrase: 'menu_about', locale: lang}) %></h2>
+      <p itemprop="description"><%= __({phrase: 'description_about', locale: lang}) %></p>
     </div>
   </div>
 </div>
@@ -49,7 +49,7 @@
 <div id="team" class="section grey lighten-1 z-depth-2  flow-text" style="margin-top: 25px;">
   <div class="container">
     <div class="row">
-      <h2 class="header red-text tex-darken-4"><%= menu_team %></h2>
+      <h2 class="header red-text tex-darken-4"><%= __({phrase: 'menu_team', locale: lang}) %></h2>
     </div>
     <div class="row">
 
@@ -60,7 +60,7 @@
         <p class="center-align" itemprop="name">
           <a href="https://linkedin.com/in/luciomf"><strong>Lucio Moya</strong></a>
         </p>
-        <p class="center-align" itemprop="jobTitle"><em><%= description_lmoya %></em></p>
+        <p class="center-align" itemprop="jobTitle"><em><%= __({phrase: 'description_lmoya', locale: lang}) %></em></p>
       </div>
 
       <div class="col s12 m4" itemprop="founder" itemscope itemtype="http://schema.org/Person">
@@ -71,7 +71,7 @@
           <a href="https://linkedin.com/in/pgambetta">
             <strong>Pablo Gambetta</strong></p>
           </a>
-        <p class="center-align" itemprop="jobTitle"><em><%= description_pgambetta %></em></p>
+        <p class="center-align" itemprop="jobTitle"><em><%= __({phrase: 'description_pgambetta', locale: lang}) %></em></p>
       </div>
 
       <div class="col s12 m4" itemscope itemtype="http://schema.org/Person">
@@ -81,7 +81,7 @@
         <p class="center-align" itemprop="name">
           <strong>Ainú Chambeaud</strong>
         </p>
-        <p class="center-align"><em><%= description_achambeaud %></em></p>
+        <p class="center-align"><em><%= __({phrase: 'description_achambeaud', locale: lang}) %></em></p>
       </div>
 
     </div>
@@ -91,7 +91,7 @@
 <div id="services" class="section white z-depth-1  flow-text" style="margin-top: 25px;">
   <div class="container" itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog">
     <div class="row">
-      <h2 class="header red-text tex-darken-4"><%= menu_services %></h2>
+      <h2 class="header red-text tex-darken-4"><%= __({phrase: 'menu_services', locale: lang}) %></h2>
     </div>
     <div class="row">
 
@@ -100,11 +100,11 @@
           <div class="card-image grey darken-3">
             <img itemprop="image" src="./img/services.jpg">
             <span itemprop="name" class="card-title hero-content">
-              <%= title_rest %>
+              <%= __({phrase: 'title_rest', locale: lang}) %>
             </span>
           </div>
           <div class="card-content">
-            <p itemprop="description"><%= description_rest %></p>
+            <p itemprop="description"><%= __({phrase: 'description_rest', locale: lang}) %></p>
           </div>
         </div>
 
@@ -112,11 +112,11 @@
           <div class="card-image grey darken-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
             <img itemprop="image" src="./img/multimedia.jpg">
             <span itemprop="name" class="card-title hero-content ">
-              <%= title_canvas %>
+              <%= __({phrase: 'title_canvas', locale: lang}) %>
             </span>
           </div>
           <div class="card-content">
-            <p itemprop="description"><%= description_canvas %></p>
+            <p itemprop="description"><%= __({phrase: 'description_canvas', locale: lang}) %></p>
           </div>
         </div>
       </div>
@@ -126,20 +126,20 @@
           <div class="card-image grey darken-3">
             <img itemprop="image" src="./img/spa.jpg">
             <span itemprop="name" class="card-title hero-content ">
-              <%= title_singlepage %>
+              <%= __({phrase: 'title_singlepage', locale: lang}) %>
             </span>
           </div>
           <div class="card-content">
-            <p itemprop="description" lang="en"><%= description_singlepage %></p>
+            <p itemprop="description" lang="en"><%= __({phrase: 'description_singlepage', locale: lang}) %></p>
           </div>
         </div>
         <div class="card" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
           <div class="card-image grey darken-3">
             <img itemprop="image" src="./img/realtime.jpg">
-            <span itemprop="name" class="card-title hero-content"><%= title_realtime %></span>
+            <span itemprop="name" class="card-title hero-content"><%= __({phrase: 'title_realtime', locale: lang}) %></span>
           </div>
           <div class="card-content">
-            <p itemprop="description"><%= description_realtime %></p>
+            <p itemprop="description"><%= __({phrase: 'description_realtime', locale: lang}) %></p>
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@
 <div id="clients" class="section grey lighten-1 z-depth-2 flow-text" style="margin-top: 25px;">
   <div class="container">
     <div class="row">
-      <h2 class="header red-text tex-darken-4"><%= menu_clients %></h2>
+      <h2 class="header red-text tex-darken-4"><%= __({phrase: 'menu_clients', locale: lang}) %></h2>
     </div>
 
     <div class="row">
@@ -213,36 +213,36 @@
 <div id="contact" class="section white z-depth-1 flow-text" style="margin-top: 25px;">
   <div class="container">
     <div class="row">
-      <h2 class="header red-text tex-darken-4"><%= menu_contact %></h2>
+      <h2 class="header red-text tex-darken-4"><%= __({phrase: 'menu_contact', locale: lang}) %></h2>
     </div>
     <div class="row">
       <form class="col s12" id="message-form">
         <div class="row">
           <div class="input-field col s6">
             <input name="first_name" id="first_name" type="text" class="validate" required>
-            <label for="first_name"><%= name_contact %> Name</label>
+            <label for="first_name"><%= __({phrase: 'name_contact', locale: lang}) %></label>
           </div>
           <div class="input-field col s6">
             <input name="company" id="company" type="text" class="validate" required>
-            <label for="company_name"><%= company_contact %> Company</label>
+            <label for="company_name"><%= __({phrase: 'company_contact', locale: lang}) %></label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <input name="email" id="email" type="email" class="validate" required>
-            <label for="email"><%= email_contact %> Email</label>
+            <label for="email"><%= __({phrase: 'email_contact', locale: lang}) %></label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <textarea name="textbody" id="textbody" class="materialize-textarea" required></textarea>
-            <label for="textbody"><%= message_contact %> Message</label>
+            <label for="textbody"><%= __({phrase: 'message_contact', locale: lang}) %></label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12 red-text tex-darken-4">
             <button id="send-btn" class="waves-effect red btn"><i class="material-icons left">comment</i>
-              <%= send_contact %>
+              <%= __({phrase: 'send_contact', locale: lang}) %>
             </button>
           </div>
         </div>
