@@ -13,12 +13,16 @@ HTML + CSS + Javscript
 git clone https://github.com/khemlabs/khemlabs-site.git
 cd khemlabs-site
 GMAIL_USER="user" GMAIL_PASSWORD="password" EMAIL_TO="list" vagrant up --no-parallel
+OR
+DISABLE_EMAIL="true" vagrant up --no-parallel
 ```
 
 ## Debugging ##
 
 ```
 #!bash
+bash scripts/debug.sh
+
 http://127.0.0.1:9080/?ws=127.0.0.1:9080&port=5858
 ```
 
