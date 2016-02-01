@@ -14,7 +14,9 @@
     "Express",
     "PostgreSQL"
   ]);
-                                                 
+         
+  $(".button-collapse").sideNav();
+  
   $('a[href^="#"]').on('click',function (e) {
       e.preventDefault();
 
