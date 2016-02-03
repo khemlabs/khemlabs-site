@@ -6,14 +6,18 @@
 
 .hero
 {
-	height: 300px;
-    background-color:#424242;
-	  overflow: hidden;
-    background-image: url('../img/nodes.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: right top;
-    background-size: cover;
+  background-color:#424242;
+  overflow: hidden;
+  background-image: url('../img/nodes.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right top;
+  background-size: cover;
+}
+
+.limit-height-300
+{
+  height: 300px;
 }
 
 .hero-content
