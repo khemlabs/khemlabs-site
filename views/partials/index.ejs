@@ -98,19 +98,13 @@
   </div>
 </div>
 
-<div id="wwo" class="section hero lighten-1 z-depth-2  flow-text" style="margin-top: 25px;">
-  <div class="">
+<div id="services" class="section hero lighten-1 z-depth-2  flow-text" style="margin-top: 25px;">
     <div class="row">
-      <h2 class="header white-text tex-darken-4"><%= __({phrase: 'wwd_title', locale: lang}) %> (image card)</h2>
-    </div>
-    <div class="row">
-      
       <div class="column">
         <div class="col s12 m4">
           <div class="card">
-            <div class="card-image">
-              <img src="./img/mobile-apps.jpg" height="250px">
-              <span class="card-title"><%= __({phrase: 'wwd_apps_title', locale: lang}) %></span>
+            <div class="card-title-black">
+              <span><%= __({phrase: 'wwd_apps_title', locale: lang}) %></span>
             </div>
             <div class="card-content">
               <p><%= __({phrase: 'wwd_apps_description', locale: lang}) %></p>
@@ -122,9 +116,8 @@
       <div class="column">
         <div class="col s12 m4">
           <div class="card">
-            <div class="card-image">
-              <img src="./img/customizedsolutions.jpg" height="250px">
-              <span class="card-title"><%= __({phrase: 'wwd_customized_title', locale: lang}) %></span>
+            <div class="card-title-black">
+              <span><%= __({phrase: 'wwd_customized_title', locale: lang}) %></span>
             </div>
             <div class="card-content">
               <p><%= __({phrase: 'wwd_customized_description', locale: lang}) %></p>
@@ -135,10 +128,10 @@
       
       <div class="column">
         <div class="col s12 m4">
+          
           <div class="card">
-            <div class="card-image">
-              <img src="./img/multimediasolutions.jpg" height="250px">
-              <span class="card-title"><%= __({phrase: 'wwd_multimedia_title', locale: lang}) %></span>
+            <div class="card-title-black">
+              <span><%= __({phrase: 'wwd_multimedia_title', locale: lang}) %></span>  
             </div>
             <div class="card-content">
               <p><%= __({phrase: 'wwd_multimedia_description', locale: lang}) %></p>
@@ -148,48 +141,9 @@
       </div>
       
     </div>
-  </div>
 </div>
 
-<div id="wwo" class="section hero lighten-1 z-depth-2  flow-text" style="margin-top: 50px;">
-  <div class="">
-    <div class="row">
-      <h2 class="header white-text tex-darken-4"><%= __({phrase: 'wwd_title', locale: lang}) %> (only text)</h2>
-    </div>
-    <div class="row white-text">
-      
-      <div class="col s12 m4" itemprop="founder" itemscope itemtype="http://schema.org/Person">
-        <p class="center-align" itemprop="name">
-          <strong><%= __({phrase: 'wwd_apps_title', locale: lang}) %></strong>
-        </p>
-        <p class="center-align" itemprop="jobTitle">
-          <em><%= __({phrase: 'wwd_apps_description', locale: lang}) %></em>
-        </p>
-      </div>
-
-      <div class="col s12 m4" itemprop="founder" itemscope itemtype="http://schema.org/Person">
-        <p class="center-align" itemprop="name">
-          <strong><%= __({phrase: 'wwd_multimedia_title', locale: lang}) %></strong>
-        </p>
-        <p class="center-align" itemprop="jobTitle">
-          <em><%= __({phrase: 'wwd_multimedia_description', locale: lang}) %></em>
-        </p>
-      </div>
-
-      <div class="col s12 m4" itemscope itemtype="http://schema.org/Person">
-        <p class="center-align" itemprop="name">
-          <strong><%= __({phrase: 'wwd_customized_title', locale: lang}) %></strong>
-        </p>
-        <p class="center-align" itemprop="jobTitle">
-          <em><%= __({phrase: 'wwd_customized_description', locale: lang}) %></em>
-        </p>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-<div id="services" class="section white z-depth-1  flow-text" style="margin-top: 25px;">
+<div class="section white z-depth-1  flow-text" style="margin-top: 25px;">
   <div class="container" itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog">
     <div class="row">
       <h2 class="header red-text tex-darken-4"><%= __({phrase: 'menu_services', locale: lang}) %></h2>

@@ -50,3 +50,11 @@
     text-align: justify;
     hyphens: auto;
 }
+
+.card-title-black{
+  color: #fff;
+  padding: 20px;
+  background-color: #212121;  
+  text-align: center;
+}
+
