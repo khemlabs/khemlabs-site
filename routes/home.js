@@ -12,7 +12,15 @@ router.get('/es', function(req, res, next) {
   return res.render('partials/index.ejs', {lang: 'es'});
 });
 
+router.get('/es_AR', function(req, res, next) {
+  return res.render('partials/index.ejs', {lang: 'es'});
+});
+
 router.get('/en', function(req, res, next) {
+  return res.render('partials/index.ejs', {lang: 'en'});
+});
+
+router.get('/en_US', function(req, res, next) {
   return res.render('partials/index.ejs', {lang: 'en'});
 });
 
