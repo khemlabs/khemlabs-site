@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper grey darken-4">
-      <a href="#!" class="brand-logo" itemprop="name"><span style="color:#fff;">khem</span><span style="color:#d02232;">labs</span></a>
+      <a href="#!" class="brand-logo"><span style="color:#fff;">khem</span><span style="color:#d02232;">labs</span></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#about-us"><%= __({phrase: 'menu_about', locale: lang}) %></a></li>
         <li><a href="#team"><%= __({phrase: 'menu_team', locale: lang}) %></a></li>
@@ -28,7 +28,7 @@
     <a itemprop="url" href="http://khemlabs.com" style="display: block;" >
       <img itemprop="logo" src="./img/logo-brand.png" />
     </a>
-    <span itemprop="legalName"><strong style="color:#333133;">khem</strong> <strong style="color:#d02232; margin-left:-0.2em;">labs</strong></span>
+    <span itemprop="name"><strong style="color:#333133;">khem</strong> <strong style="color:#d02232; margin-left:-0.2em;">labs</strong></span>
   </h1>
   <h5 class="header center" style="color:#d02232; margin-top: 0.1em;">
     <%= __({phrase: 'khemlabs_frase', locale: lang}) %>
@@ -36,7 +36,7 @@
   <p style="">
     <a itemprop="sameAs" href="https://github.com/khemlabs" target="_blank" style="margin-right:8px;color:#d02232;"><i class="fa fa-github fa-2x"></i></a>
     <a itemprop="sameAs" href="https://twitter.com/khemlabs" target="_blank" style="margin-right:8px;color:#d02232;"><i class="fa fa-twitter fa-2x"></i></a>
-    <a itemprop="sameAs" href="https://www.facebook.com/Khem-Labs-454510288034424" target="_blank" style="margin-right:8px;color:#d02232;"><i class="fa fa-facebook fa-2x"></i></a>
+    <a itemprop="sameAs" href="https://www.facebook.com/khemlabs" target="_blank" style="margin-right:8px;color:#d02232;"><i class="fa fa-facebook fa-2x"></i></a>
     <a itemprop="sameAs" href="https://www.linkedin.com/company/khemlabs" target="_blank" style="margin-right:8px;color:#d02232;"><i class="fa fa-linkedin fa-2x"></i></a>
   </p>
 </div>
@@ -56,7 +56,7 @@
   </div>
 </div>
 
-<div class="section hero lighten-1 z-depth-2  flow-text" style="margin-top: 25px;">
+<div class="section hero lighten-1 z-depth-2 flow-text" style="margin-top: 25px;">
     <div class="row">
       <div class="column">
         <div class="col s12 m4">
@@ -130,7 +130,7 @@
         <p class="center-align" itemprop="jobTitle"><em><%= __({phrase: 'description_pgambetta', locale: lang}) %></em></p>
       </div>
 
-      <div class="col s12 m4" itemscope itemtype="http://schema.org/Person">
+      <div class="col s12 m4" itemprop="funder" itemscope itemtype="http://schema.org/Person">
         <div  class="center-align">
           <img itemprop="image" src="./img/fernando.png" class="circle img-responsive" width="270" height="270">
         </div>
@@ -142,7 +142,7 @@
         <p class="center-align" itemprop="jobTitle"><em><%= __({phrase: 'description_fmoya', locale: lang}) %></em></p>
       </div>
 
-      <div class="col s12 m4" itemscope itemtype="http://schema.org/Person">
+      <div class="col s12 m4" itemprop="employee" itemscope itemtype="http://schema.org/Person">
         <div  class="center-align">
           <img itemprop="image" src="./img/nico.png" class="circle img-responsive" width="270" height="270">
         </div>
@@ -154,7 +154,7 @@
         <p class="center-align" itemprop="jobTitle"><em><%= __({phrase: 'description_nraffaele', locale: lang}) %></em></p>
       </div>
 
-      <div class="col s12 m4" itemscope itemtype="http://schema.org/Person">
+      <div class="col s12 m4" itemprop="employee" itemscope itemtype="http://schema.org/Person">
         <div  class="center-align">
           <img itemprop="image" src="./img/victoria.png" class="circle img-responsive" width="270" height="270">
         </div>
@@ -202,8 +202,8 @@
           </div>
         </div>
 
-        <div class="card">
-          <div class="card-image grey darken-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+        <div class="card" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+          <div class="card-image grey darken-3">
             <img itemprop="image" src="./img/multimedia.jpg">
             <span itemprop="name" class="card-title hero-content ">
               <%= __({phrase: 'title_canvas', locale: lang}) %>
@@ -242,6 +242,27 @@
   </div>
 </div>
 
+<div id="companies" class="section grey lighten-1 z-depth-2 flow-text" style="margin-top: 25px;">
+  <div class="container">
+    <div class="row">
+      <h2 class="header red-text tex-darken-4"><%= __({phrase: 'menu_companies', locale: lang}) %></h2>
+    </div>
+
+		<div class="row">
+
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image white">
+            <img src="./img/clients/quickicks.png" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>			
+
 <div id="clients" class="section grey lighten-1 z-depth-2 flow-text" style="margin-top: 25px;">
   <div class="container">
     <div class="row">
@@ -259,11 +280,7 @@
       </div>
 
       <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image white">
-            <img src="./img/clients/hayequipo.png" />
-          </div>
-        </div>
+
       </div>
 
       <div class="col s12 m4">
