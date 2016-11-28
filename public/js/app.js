@@ -1,13 +1,13 @@
 (function($, Materialize){
   
   var scroller = new letterScroller('console-stdout', [
-		"Web Services",
-		"Mobile Apps",
+    "Web Services",
+    "Mobile Apps",
     "Single Page Applications",
-		"Node.js v4",
-		"Web Mobile",
-		"ES2015",
-		"Ionic",
+    "Node.js",
+    "Web Mobile",
+    "ES2015+",
+    "Ionic",
     "AngularJS",
     "React",
     "MongoDB",
