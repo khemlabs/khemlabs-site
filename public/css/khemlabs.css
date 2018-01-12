@@ -15,6 +15,28 @@
   background-size: cover;
 }
 
+.hero2
+{
+  background-color:#424242;
+  overflow: hidden;
+  background-image: url('../img/nodes2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right top;
+  background-size: cover;
+}
+
+.net
+{
+  background-color:#424242;
+  overflow: hidden;
+  background-image: url('../img/nodes.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right top;
+  background-size: cover;
+}
+
 .limit-height-300
 {
   height: 300px;
