@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  redisdb:
+    restart: on-failure
+    ports:
+    - "${PORT_REDIS}:6379"
+  app:
+    restart: on-failure
+    volumes:
+      - ./:/app
+    ports:
+      - "${PORT_APP}:3000"
+  

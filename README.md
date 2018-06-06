@@ -1,103 +1,95 @@
-# README #
+# README
 
-Khemlabs Official Website
+## Khem Labs Official Website built with love
 
-### What is this repository for? ###
+### DEV
 
-HTML + CSS + Javscript
+#### NPM Commands
 
-## How do I get set up with Vagrant? ##
+To run this commands you need to have docker and docker-compose
 
-```
-#!bash
-git clone https://github.com/khemlabs/khemlabs-site.git
-cd khemlabs-site
-GMAIL_USER="user" GMAIL_PASSWORD="password" EMAIL_TO="list" vagrant up --no-parallel
-OR
-DISABLE_EMAIL="true" vagrant up --no-parallel
-```
-
-## Debugging ##
+##### BUILD IMAGE, CONTAINER AND RUN
 
 ```
-#!bash
-bash scripts/debug.sh
-
-http://127.0.0.1:9080/?ws=127.0.0.1:9080&port=5858
+# Run
+yarn build
+# Or
+npm run build
 ```
 
-## Known Issues ##
-
-When executing this project with vagrant, "local.sh" is run before lifting nodejs server, that's why it could happen that although the "docker instance" is running, the page is not accesible. You only have to wait until local.sh finish.
-
-## How do I get set up with Docker? ##
+##### RECREATE CONTAINER AND RUN
 
 ```
-#!bash
-git clone https://github.com/khemlabs/khemlabs-site.git
-cd khemlabs-site
-docker build -t khemlabs/site .
+# Run
+yarn recreate
+# Or
+npm run recreate
 ```
 
-## Run docker without proxy ##
+##### START EXISITNG CONTAINER
 
 ```
-#!bash
-docker run --name redis -d redis
-docker run -d --name khemlabsite --link redis:redishost -p 3000:3000 -e GMAIL_USER="user" -e GMAIL_PASSWORD='password' -e EMAIL_TO='list' khemlabs/site
+# Run
+yarn start
+# Or
+npm run start
 ```
 
-## Run docker with proxy ##
+##### STOP EXISTING CONTAINER
 
 ```
-#!bash
-docker run --name redis -d redis
-docker run -d --name nginx-proxy -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
-docker run -d --name khemlabsite --link redis:redishost -e GMAIL_USER="user" -e GMAIL_PASSWORD='password' -e EMAIL_TO='list' -e VIRTUAL_HOST=host khemlabs/site
+# Run
+yarn stop
+# Or
+npm run stop
 ```
 
-### How do I get set up in my local machine? ###
+### Configurate project
+
+Add gmail credentials or set boolean to disable gmail at:
+
+- DEV: **./config/env/dev.env**
+- PROD: **./config/env/prod.env**
+  _prod.env must exist to build project in prod_
 
 ```
-#!bash
-git clone https://github.com/khemlabs/khemlabs-site.git
-cd khemlabs-site
-npm install
-node app.js
+GMAIL_USER=user
+GMAIL_PASSWORD=password
+EMAIL_TO=list
 ```
 
-### Environment Variables ###
+**OR**
 
-## REDIS_HOST ##
+```
+DISABLE_EMAIL=true
+```
 
-* Type: string
-* Required: optional
-* Default: "redishost"
+### Environment Variables
 
-## DISABLE_EMAIL ##
+#### DISABLE_EMAIL
 
-* Type: Boolean
-* Required: optional
-* Default: false
+- Type: Boolean
+- Required: optional
+- Default: false
 
-## EMAIL_TO ##
+#### EMAIL_TO
 
-* Type: string
-* Required: When DISABLE_EMAIL is false
-* Example: "emailone@gmail.com, email2@gmail.com, email3@gmail.com"
+- Type: string
+- Required: When DISABLE_EMAIL is false
+- Example: "emailone@gmail.com, email2@gmail.com, email3@gmail.com"
 
-## GMAIL_USER ##
+#### GMAIL_USER
 
-* Type: email
-* Required: When DISABLE_EMAIL is false
+- Type: email
+- Required: When DISABLE_EMAIL is false
 
-## GMAIL_PASSWORD ##
+#### GMAIL_PASSWORD
 
-* Type: string
-* Required: When DISABLE_EMAIL is false
+- Type: string
+- Required: When DISABLE_EMAIL is false
 
-### Who do I talk to? ###
+### Who do I talk to?
 
-* dnangelus
-* elgambet
-* ajchambeaud
+- dnangelus
+- elgambet
+- ajchambeaud

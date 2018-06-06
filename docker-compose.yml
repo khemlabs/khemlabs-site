@@ -1,0 +1,22 @@
+version: "3" 
+
+services:
+  redisdb:
+    image: redis:4.0.9
+    container_name: redishost
+    restart: always
+    networks:
+      - site_network
+  app:
+    depends_on:
+      - redisdb
+    build: .
+    image: "khemlabs/khemlabs-site:${TAG:-dev}"
+    container_name: khemlabs-site
+    env_file: "${ENV_APP_FILE_PATH:-./config/env/prod.env}"
+    restart: always
+    networks:
+      - site_network
+
+networks:
+  site_network:

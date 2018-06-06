@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/app/node_modules/.bin/npm', 'update' ]
+2 info using npm@3.5.3
+3 info using node@v8.11.2
+4 warn invalid config loglevel="notice"
+5 verbose stack Error: Cannot find module 'internal/util/types'
+5 verbose stack     at Function.Module._resolveFilename (module.js:547:15)
+5 verbose stack     at Function.Module._load (module.js:474:25)
+5 verbose stack     at Module.require (module.js:596:17)
+5 verbose stack     at require (internal/module.js:11:18)
+5 verbose stack     at evalmachine.<anonymous>:31:26
+5 verbose stack     at Object.<anonymous> (/app/node_modules/npm/node_modules/cmd-shim/node_modules/graceful-fs/fs.js:11:1)
+5 verbose stack     at Module._compile (module.js:652:30)
+5 verbose stack     at Object.Module._extensions..js (module.js:663:10)
+5 verbose stack     at Module.load (module.js:565:32)
+5 verbose stack     at tryModuleLoad (module.js:505:12)
+6 verbose cwd /app
+7 error Linux 4.15.0-22-generic
+8 error argv "/usr/local/bin/node" "/app/node_modules/.bin/npm" "update"
+9 error node v8.11.2
+10 error npm  v3.5.3
+11 error code MODULE_NOT_FOUND
+12 error Cannot find module 'internal/util/types'
+13 error If you need help, you may report this error at:
+13 error     <https://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]
