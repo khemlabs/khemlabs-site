@@ -5,14 +5,16 @@
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato|Play|Roboto" type="text/css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" type="text/css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" type="text/css">
-	<link rel="stylesheet" href="./css/khemlabs.css" type="text/css">
-	<link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
-	<link rel="stylesheet" href="./css/materialize.min.css" type="text/css">
-	<link rel="shortcut icon" href="./img/favicon.ico" />
-	<link rel="icon" type="image/png" href="./img/favicon.png" />
-	<meta name="keywords" content="startup studio,startup,enterpreneur,venture builder,company builder,parallel entrepreneurship,html,html5,html 5,css,css3,css 3,json,api,web development,javascript,angularjs,angular js,reactjs,react js,redis,mongodb,postgresql,postgres,python,game development,mobile,responsive,php,amazon,android,linux,open source">
-	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<link rel="alternate" href="https://khemlabs.com/" hreflang="x-default" />
-	<link rel="alternate" hreflang="es" href="https://khemlabs.com/es" />
-	<link rel="alternate" hreflang="en" href="https://khemlabs.com/en" />
+	<% styles.forEach(function(style) { %>
+		<link rel="stylesheet" href="<%= style.path %><%= style.file %>" <% }); %>
+		<link rel="stylesheet" href="./css/khemlabs.css" type="text/css">
+		<link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="./css/materialize.min.css" type="text/css">
+		<link rel="shortcut icon" href="./img/favicon.ico" />
+		<link rel="icon" type="image/png" href="./img/favicon.png" />
+		<meta name="keywords" content="startup studio,startup,enterpreneur,venture builder,company builder,parallel entrepreneurship,html,html5,html 5,css,css3,css 3,json,api,web development,javascript,angularjs,angular js,reactjs,react js,redis,mongodb,postgresql,postgres,python,game development,mobile,responsive,php,amazon,android,linux,open source">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link rel="alternate" href="https://khemlabs.com/" hreflang="x-default" />
+		<link rel="alternate" hreflang="es" href="https://khemlabs.com/es" />
+		<link rel="alternate" hreflang="en" href="https://khemlabs.com/en" />
 </head>

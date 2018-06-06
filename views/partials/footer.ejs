@@ -19,13 +19,16 @@
 	</div>
 </footer>
 <script src="./js/lib/jquery.min.js"></script>
-<script src="./js/lib/materialize.min.js"></script>
-<script src="./js/app.js"></script>
-<script src="./js/analytics.js"></script>
-<!-- Start Facebook Pixel Code -->
-<script src="./js/facebook.js"></script>
-<noscript>
-	<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=486754641509196&ev=PageView&noscript=1"
-	/>
-</noscript>
-<!-- End Facebook Pixel Code -->
+<% libs.forEach(function(lib) { %>
+	<script src="<%= lib.path %><%= lib.file %>"></script>
+	<% }); %>
+		<script src="./js/lib/materialize.min.js"></script>
+		<script src="./js/app.js"></script>
+		<script src="./js/analytics.js"></script>
+		<!-- Start Facebook Pixel Code -->
+		<script src="./js/facebook.js"></script>
+		<noscript>
+			<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=486754641509196&ev=PageView&noscript=1"
+			/>
+		</noscript>
+		<!-- End Facebook Pixel Code -->

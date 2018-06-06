@@ -1,28 +1,50 @@
 const redis = require('redis'),
 	log = require('./Log'),
+	nodemailer = require('nodemailer'),
 	client = redis.createClient(6379, 'redishost');
 
-if (process.env.DISABLE_EMAIL && process.env.DISABLE_EMAIL != 'false') {
+let transporter;
+
+if (process.env.DISABLE_EMAIL && process.env.DISABLE_EMAIL === 'true') {
 	log.info('Email disabled', 'services/Message', 'config');
 } else {
-	log.info('Configuring email (' + process.env.GMAIL_USER + ')...', 'services/Message', 'config');
-	const transporter = require('nodemailer').createTransport({
-		service: 'gmail',
-		auth: {
-			user: process.env.GMAIL_USER,
-			pass: process.env.GMAIL_PASSWORD
+	log.info(`Configuring email (${process.env.GMAIL_OAUTH_SENDER})...`, 'services/Message', 'config');
+	try {
+		if (
+			process.env.GMAIL_OAUTH_USERNAME &&
+			process.env.GMAIL_OAUTH_CLIENT_ID &&
+			process.env.GMAIL_OAUTH_CLIENT_SECRET &&
+			process.env.GMAIL_OAUTH_REFRESH_TOKEN &&
+			process.env.GMAIL_OAUTH_ACCESS_TOKEN &&
+			process.env.GMAIL_OAUTH_SENDER &&
+			process.env.GMAIL_OAUTH_RECEIVER
+		) {
+			const auth = {
+				type: 'OAuth2',
+				user: process.env.GMAIL_OAUTH_USERNAME,
+				clientId: process.env.GMAIL_OAUTH_CLIENT_ID,
+				clientSecret: process.env.GMAIL_OAUTH_CLIENT_SECRET,
+				refreshToken: process.env.GMAIL_OAUTH_REFRESH_TOKEN
+			};
+			transporter = nodemailer.createTransport({ service: 'gmail', auth });
+		} else {
+			log.error('Invalid GMAIL SMTP config', 'services/emailService', 'config');
 		}
-	});
+	} catch (e) {
+		console.error(e);
+		log.error('xouth2 not installed, please do "npm install xoauth2 --save"', 'services/emailService', 'setGMAILAPI');
+	}
 }
 
 const email = data => {
-	if (process.env.DISABLE_EMAIL && process.env.DISABLE_EMAIL != 'false') {
+	if (process.env.DISABLE_EMAIL && process.env.DISABLE_EMAIL === 'true') {
 		return log.info('Email disabled', 'services/Message', 'email');
 	}
-	log.info(`Sending email to (${process.env.EMAIL_TO})`, 'services/Message', 'email');
-	transporter.sendMail({
-		from: data.email,
-		to: process.env.EMAIL_TO,
+	if (!transporter) return log.info('transporter error', 'services/Message', 'email');
+	log.info(`Sending email to (${process.env.GMAIL_OAUTH_RECEIVER})`, 'services/Message', 'email');
+	const config = {
+		from: process.env.GMAIL_OAUTH_SENDER,
+		to: process.env.GMAIL_OAUTH_RECEIVER,
 		subject: 'Message from site',
 		html: `<p>
 			Name: ${data.name}<br> 
@@ -31,7 +53,8 @@ const email = data => {
 			Message: <br>
 			${data.textbody}
 			</p>`
-	});
+	};
+	transporter.sendMail(config);
 	return;
 };
 

@@ -11,7 +11,8 @@ const express = require('express'),
 	ejs = require('ejs'),
 	messageRouter = require('./routes/message'),
 	homeRouter = require('./routes/home'),
-	log = require('./services/Log');
+	log = require('./services/Log'),
+	config = require('./config/config');
 
 // Configure app
 const server = http.createServer(app);
@@ -47,6 +48,18 @@ app.use('/', homeRouter);
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
+
+config.CLIENT_LIBS.forEach(lib => {
+	const staticPath = `${__dirname}/${lib.path}`;
+	log.info(`path (${lib.path}) added as static path`, 'app.js', 'static_libs');
+	app.use(`/${lib.path}`, express.static(staticPath));
+});
+
+config.CLIENT_STYLES_LIBS.forEach(style => {
+	const staticPath = `${__dirname}/${style.path}`;
+	log.info(`path (${style.path}) added as static path`, 'app.js', 'static_styles_libs');
+	app.use(`/${style.path}`, express.static(staticPath));
+});
 
 // listen
 server.listen(process.env.PORT || 3000, function() {
