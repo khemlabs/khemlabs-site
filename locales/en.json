@@ -8,7 +8,8 @@
 	"menu_technologies": "Expertise",
 	"menu_contact": "Contact",
 	"khemlabs_frase": "Transmuting ideas into technology",
-	"description_about": "We are developers, transmuting ideas into technological products. We have experience working in different scenarios with distinct technologies. In a connected, complex and dynamic world new problems are emerging that require technological solutions. As a result Khem Labs keeps on exploring, investigating and developing new techniques to convert each solution into a successful company.",
+	"description_about":
+		"We are developers, transmuting ideas into technological products. We have experience working in different scenarios with distinct technologies. In a connected, complex and dynamic world new problems are emerging that require technological solutions. As a result Khem Labs keeps on exploring, investigating and developing new techniques to convert each solution into a successful company.",
 	"description_lmoya": "Founder and CEO",
 	"description_pgambetta": "Co-Founder and CPO",
 	"description_fmoya": "CFO",
@@ -16,21 +17,29 @@
 	"description_nraffaele": "IT Manager",
 	"description_vicpicchio": "Planning & Project Manager",
 	"description_mmosquera": "UI & Graphics Designer",
+	"description_valegre": "Software Quality Analyst",
 	"wwd_title": "What do we do",
 	"wwd_apps_title": "Web & Mobile Applications",
-	"wwd_apps_description": "We create innovative solutions to enrich and enhance the user experience. We design mobile apps and web services. We connect microservices unifying communications.",
+	"wwd_apps_description":
+		"We create innovative solutions to enrich and enhance the user experience. We design mobile apps and web services. We connect microservices unifying communications.",
 	"wwd_multimedia_title": "Multimedia",
-	"wwd_multimedia_description": "We develop interactive experiences and games that run on the same web browser without installation. We also make versions for different devices (phones, consoles, etc.)",
+	"wwd_multimedia_description":
+		"We develop interactive experiences and games that run on the same web browser without installation. We also make versions for different devices (phones, consoles, etc.)",
 	"wwd_customized_title": "Customized solutions",
-	"wwd_customized_description": "We provide a team that will make an initial general review and present a development plan in phases, guiding throughout the creation process of the solution up to the final product.",
+	"wwd_customized_description":
+		"We provide a team that will make an initial general review and present a development plan in phases, guiding throughout the creation process of the solution up to the final product.",
 	"title_rest": "Web & Mobile applications. Microservices",
-	"description_rest": "When you're building a modern application, interconnected microservices that can be consumed from different applications and different platforms are preferred rather than a monolithic software approach. At Khem Labs, we work with our clients designing, developing and maintaining scalable aplications and REST APIs to allow communication and an exchange of data in a simple, standard and secure way. Public or private APIs are widely used by organizations that benefit from the developer community utilizing their data. Examples of these are found in social applications we use everyday.",
+	"description_rest":
+		"When you're building a modern application, interconnected microservices that can be consumed from different applications and different platforms are preferred rather than a monolithic software approach. At Khem Labs, we work with our clients designing, developing and maintaining scalable aplications and REST APIs to allow communication and an exchange of data in a simple, standard and secure way. Public or private APIs are widely used by organizations that benefit from the developer community utilizing their data. Examples of these are found in social applications we use everyday.",
 	"title_canvas": "Multimedia solutions using HTML5, Canvas and WebGL",
-	"description_canvas": "In the beginning, the web was seen as a collection of relevant links that provided data and information in rich text format. We have now expanded far past that vision so that nowadays we play, entertain, learn, communicate and work in a world that flows from our browsers. With the help of the latest technologies available, we develop applications, games and interactive experiences that push boundaries of the World Wide Web.",
+	"description_canvas":
+		"In the beginning, the web was seen as a collection of relevant links that provided data and information in rich text format. We have now expanded far past that vision so that nowadays we play, entertain, learn, communicate and work in a world that flows from our browsers. With the help of the latest technologies available, we develop applications, games and interactive experiences that push boundaries of the World Wide Web.",
 	"title_singlepage": "Single Page Application development",
-	"description_singlepage": "One of the most common patterns in modern web interface is SPA (Single Page Application). A client-side managed application using technologies running entirely on the users browser. This allows a more fluid interaction without leaving the site when navigating throughout different sections. This application model is very effective for presentations, portfolios and institutional sites.",
+	"description_singlepage":
+		"One of the most common patterns in modern web interface is SPA (Single Page Application). A client-side managed application using technologies running entirely on the users browser. This allows a more fluid interaction without leaving the site when navigating throughout different sections. This application model is very effective for presentations, portfolios and institutional sites.",
 	"title_realtime": "Real-Time Web Application development",
-	"description_realtime": "The latest browser APIs allow web applications to interact with servers and even others browsers in real time. Technologies such as Web Sockets, Server Sent Events and WebRTC open a new world of possibilities: chats applications, audio and video calls, real time collaboration can now be done without installing any plugins.",
+	"description_realtime":
+		"The latest browser APIs allow web applications to interact with servers and even others browsers in real time. Technologies such as Web Sockets, Server Sent Events and WebRTC open a new world of possibilities: chats applications, audio and video calls, real time collaboration can now be done without installing any plugins.",
 	"name_contact": "Name",
 	"company_contact": "Company",
 	"email_contact": "Email",
