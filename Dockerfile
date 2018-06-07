@@ -7,6 +7,9 @@ FROM node:8.11.2
 
 EXPOSE 3000
 
+# Copy application folder and configurations
+COPY . /app
+
 WORKDIR /app
 
 # Install dependencies
