@@ -1,18 +1,18 @@
 (function($, Materialize) {
 	var scroller = new letterScroller('console-stdout', [
-		'Web Services',
-		'Mobile Apps',
 		'ReactNative',
-		'Ionic',
-		'Single Page Applications',
-		'Node.js',
+		'Mobile Apps',
+		'Android',
+		'IOS',
 		'ReactJS',
+		'Angular',
+		'Web Services',
+		'Single Page Applications',
 		'Responsive & Mobile First Web',
+		'Node.js',
 		'Docker',
 		'MongoDB',
-		'PostgreSQL',
-		'Linux',
-		'OpenSource'
+		'Redis'
 	]);
 
 	$('.button-collapse').sideNav();
